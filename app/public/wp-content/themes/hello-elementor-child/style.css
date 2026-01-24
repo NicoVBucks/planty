@@ -1,0 +1,69 @@
+/*
+Theme Name: Hello Elementor Child
+Theme URI: https://elementor.com/hello-theme/?utm_source=wp-themes&utm_campaign=theme-uri&utm_medium=wp-dash
+Template: hello-elementor
+Author: Nicolas
+Author URI: https://elementor.com/?utm_source=wp-themes&utm_campaign=author-uri&utm_medium=wp-dash
+Description: Hello Elementor is a lightweight and minimalist WordPress theme that was built specifically to work seamlessly with the Elementor site builder plugin. The theme is free, open-source, and designed for users who want a flexible, easy-to-use, and customizable website. The theme, which is optimized for performance, provides a solid foundation for users to build their own unique designs using the Elementor drag-and-drop site builder. Its simplicity and flexibility make it a great choice for both beginners and experienced Web Creators.
+Tags: accessibility-ready,flexible-header,custom-colors,custom-menu,custom-logo,featured-images,rtl-language-support,threaded-comments,translation-ready
+Version: 1.0.0.1769212933
+Updated: 2026-01-24 01:02:13
+
+*/
+
+
+/* Centrer le conteneur du formulaire */
+#wpforms-112 .wpforms-submit-container {
+    text-align: center;
+}
+
+/* Style du bouton */
+.wpforms-submit-container button.wpforms-submit {
+    height: 55px;
+    width: 198px;
+}
+
+/* Texte du bouton "Envoyer" */
+#wpforms-112 {
+    --wpforms-button-size-font-size: 15px;
+}
+
+/* Labels au-dessus des champs */
+#wpforms-112 .wpforms-field-label {
+    font-family: 'Syne', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* Champs Nom et Email */
+#wpforms-112-field_1,
+#wpforms-112-field_2 {
+    height: 71px;
+    width: 383px;
+    max-width: 100%;
+}
+
+/* Champ Message  */
+#wpforms-112-field_3 {
+    height: 237px;
+    width: 383px;
+    max-width: 100%;
+}
+
+/* Centrer tout le formulaire */
+#wpforms-112 {
+    max-width: 383px;
+    margin: 0 auto;
+}
+
+/* Masquer l'astérisque rouge */
+#wpforms-112 .wpforms-required-label {
+    display: none;
+}
+
+/* .e-con, .elementor {
+  outline: 2px solid red !important;
+} */
