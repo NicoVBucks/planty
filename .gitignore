@@ -1,14 +1,41 @@
 # WordPress core
 app/public/wp-admin/
 app/public/wp-includes/
-app/public/wp-content/plugins/
-app/public/wp-content/themes/twentytwenty*/
-app/public/wp-content/uploads/
+app/public/wp-*.php
+app/public/index.php
+app/public/xmlrpc.php
+app/public/wp-config.php
+app/public/wp-config-sample.php
 
-# Local / outils
+# WordPress plugins (tous sauf si vous en développez un)
+app/public/wp-content/plugins/
+
+# WordPress themes (garder seulement votre thème enfant)
+app/public/wp-content/themes/twentytwenty*/
+app/public/wp-content/themes/hello-elementor/
+
+# Uploads et cache
+app/public/wp-content/uploads/
+app/public/wp-content/cache/
+app/public/wp-content/upgrade/
+app/public/wp-content/backup*/
+
+# Base de données
+app/sql/
+local.sql
+*.sql
+
+# Local by Flywheel
 conf/
-app/sqlite/
+logs/
 .env
+
+# IDE
 .vscode/
 .idea/
-logs/
+*.sublime-project
+*.sublime-workspace
+
+# Système
+.DS_Store
+Thumbs.db
