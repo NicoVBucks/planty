@@ -11,6 +11,7 @@ Updated: 2026-01-24 01:02:13
 
 */
 
+/* --------------------------- FORMULAIRE NOUS RENCONTRER  ------------------------- */ 
 
 /* Centrer le conteneur du formulaire */
 #wpforms-112 .wpforms-submit-container {
@@ -67,3 +68,23 @@ Updated: 2026-01-24 01:02:13
 /* .e-con, .elementor {
   outline: 2px solid red !important;
 } */
+
+
+
+
+
+/* --------------------------- FORMULAIRE COMMANDER  ------------------------- */ 
+
+
+/* Style du bouton */
+.wpforms-submit-container button.wpforms-submit {
+    height: 55px;
+    width: 198px;
+    --wpforms-button-background-color:#E0B9B4;
+}
+
+/* Texte du bouton "Envoyer" */
+#wpforms-339 {
+    --wpforms-button-size-font-size: 15px;
+}
+
