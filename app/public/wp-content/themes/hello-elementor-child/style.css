@@ -69,9 +69,16 @@ Updated: 2026-01-24 01:02:13
   outline: 2px solid red !important;
 } */
 
+/* --------------------------- MENU NOUS RENCONTRER  ------------------------- */ 
 
+/* Lien actif du menu en gras */
+.elementor-399 .elementor-element.elementor-element-602b304 .elementor-heading-title {
+    font-weight: 700;
+}
 
-
+.home .elementor-399 .elementor-element.elementor-element-602b304 .elementor-heading-title {
+    font-weight: 400;
+}
 
 /* --------------------------- FORMULAIRE COMMANDER  ------------------------- */ 
 
@@ -88,3 +95,235 @@ Updated: 2026-01-24 01:02:13
     --wpforms-button-size-font-size: 15px;
 }
 
+/* ========================================
+   CHAMPS DE QUANTITÉ SOUS LES IMAGES
+======================================== */
+
+.produit-quantite-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.input-quantite {
+    width: 50px !important;
+    height: 70px !important;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    border: solid white !important;
+    background: white !important;
+    padding: 0 !important;
+    margin: 0 auto;
+    display: block;
+}
+
+/* Masquer les flèches */
+.input-quantite::-webkit-inner-spin-button,
+.input-quantite::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.input-quantite {
+    -moz-appearance: textfield;
+}
+
+.input-quantite:focus {
+    outline: none;
+    border-color: #E0B9B4 !important;
+    box-shadow: 0 0 0 3px rgba(224, 185, 180, 0.3);
+}
+
+/* Titres h3 dans les colonnes */
+.wpcf7-form .col-infos h3,
+.wpcf7-form .col-livraison h3 {
+    font-family: 'Syne', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 30px;
+    margin-top: 0; /* ← AJOUTÉ pour éviter espace en haut */
+}
+
+/* Colonnes individuelles */
+.wpcf7-form .col-infos,
+.wpcf7-form .col-livraison {
+    width: 100%; /* ← AJOUTÉ pour garantir largeur */
+}
+
+/* Centrer le bouton avec sélecteur :has() */
+.wpcf7-form p:has(input[type="submit"]) {
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* ========================================
+   FORMULAIRE CONTACT FORM 7
+======================================== */
+
+/* Container principal - cacher les champs de quantité du formulaire */
+.wpcf7-form .quantites-wrapper {
+    display: none; /* On utilise les champs visuels dans Elementor */
+}
+
+/* Grille 2 colonnes pour Infos + Livraison */
+.wpcf7-form .infos-livraison {
+    display: grid;
+    align-items: start;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    max-width: 1000px;
+    margin: 0 auto 40px;
+}
+
+/* Groupes de champs */
+.wpcf7-form .field-group {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.wpcf7-form .field-group label {
+    font-family: 'Syne', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: white;
+    display: block;
+    margin-bottom: -5px;
+}
+
+/* Champs texte et email */
+.wpcf7-form .field-input {
+    width: 100% !important;
+    height: 50px !important;
+    font-family: 'Syne', sans-serif;
+    font-size: 16px;
+    padding: 12px 15px !important;
+    border: none !important;
+    border-radius: 5px !important;
+    background: white !important;
+    color: #333 !important;
+    box-sizing: border-box;
+}
+
+.wpcf7-form .field-input:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(224, 185, 180, 0.4) !important;
+}
+
+/* Ligne verticale entre "Vos informations" et "Livraison" */
+.wpcf7-form .infos-livraison {
+    position: relative;
+}
+
+.wpcf7-form .infos-livraison::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: white;
+    transform: translateX(-50%);
+}
+
+/* ========================================
+   BOUTON COMMANDER
+======================================== */
+
+.wpcf7-form .wpcf7-submit {
+    font-family: 'Syne', sans-serif !important;
+    font-size: 15px !important;
+    font-weight: 400 !important;
+    color: white !important;
+    background-color: #E0B9B4 !important;
+    border: none !important;
+    border-radius: 5px !important;
+    padding: 15px 60px !important;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: block;
+    margin: 0 auto;
+}
+
+.wpcf7-form .wpcf7-submit:hover {
+    background-color: #C02E44 !important;
+}
+
+/* Masquer le wrapper de CF7 */
+.wpcf7-form .wpcf7-form-control-wrap {
+    display: block;
+}
+
+/* Message de confirmation */
+.wpcf7-response-output {
+    border: none !important;
+    background: white !important;
+    color: #3B8E46 !important;
+    padding: 15px !important;
+    border-radius: 5px !important;
+    text-align: center;
+    margin: 20px auto !important;
+    max-width: 600px;
+}
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 768px) {
+    .wpcf7-form .infos-livraison {
+        gap: 30px;
+    }
+    
+    .wpcf7-form .col-infos h3,
+    .wpcf7-form .col-livraison h3 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    
+    .wpcf7-form .field-group label {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+
+  .wpcf7-form .infos-livraison{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .wpcf7-form .col-infos,
+  .wpcf7-form .col-livraison{
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .wpcf7-form .separator,
+  .wpcf7-form .divider,
+  .wpcf7-form .infos-livraison::before,
+  .wpcf7-form .infos-livraison::after{
+    display: none !important;
+  }
+
+  .wpcf7-form .field-group{
+    width: 100%;
+  }
+
+  .wpcf7-form input[type="text"],
+  .wpcf7-form input[type="email"],
+  .wpcf7-form input[type="tel"],
+  .wpcf7-form input[type="number"],
+  .wpcf7-form input[type="url"],
+  .wpcf7-form select,
+  .wpcf7-form textarea{
+    width: 100% !important;
+    max-width: 100%;
+    box-sizing: border-box;
+    display: block;
+    font-size: 16px;
+  }
+
+}
