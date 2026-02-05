@@ -66,7 +66,7 @@ Updated: 2026-01-24 01:02:13
 }
 
 /* .e-con, .elementor {
-  outline: 2px solid red !important;
+    outline: 2px solid red !important;
 } */
 
 /* --------------------------- MENU NOUS RENCONTRER  ------------------------- */ 
@@ -96,7 +96,7 @@ Updated: 2026-01-24 01:02:13
 }
 
 /* ========================================
-   CHAMPS DE QUANTITÉ SOUS LES IMAGES
+    CHAMPS DE QUANTITÉ SOUS LES IMAGES
 ======================================== */
 
 .produit-quantite-container {
@@ -143,13 +143,13 @@ Updated: 2026-01-24 01:02:13
     font-weight: 700;
     color: white;
     margin-bottom: 30px;
-    margin-top: 0; /* ← AJOUTÉ pour éviter espace en haut */
+    margin-top: 0;
 }
 
 /* Colonnes individuelles */
 .wpcf7-form .col-infos,
 .wpcf7-form .col-livraison {
-    width: 100%; /* ← AJOUTÉ pour garantir largeur */
+    width: 100%;
 }
 
 /* Centrer le bouton avec sélecteur :has() */
@@ -159,12 +159,12 @@ Updated: 2026-01-24 01:02:13
 }
 
 /* ========================================
-   FORMULAIRE CONTACT FORM 7
+    FORMULAIRE CONTACT FORM 7
 ======================================== */
 
 /* Container principal - cacher les champs de quantité du formulaire */
 .wpcf7-form .quantites-wrapper {
-    display: none; /* On utilise les champs visuels dans Elementor */
+    display: none;
 }
 
 /* Grille 2 colonnes pour Infos + Livraison */
@@ -195,7 +195,7 @@ Updated: 2026-01-24 01:02:13
 /* Champs texte et email */
 .wpcf7-form .field-input {
     width: 100% !important;
-    height: 50px !important;
+    height: 71px !important;
     font-family: 'Syne', sans-serif;
     font-size: 16px;
     padding: 12px 15px !important;
@@ -228,7 +228,7 @@ Updated: 2026-01-24 01:02:13
 }
 
 /* ========================================
-   BOUTON COMMANDER
+    BOUTON COMMANDER
 ======================================== */
 
 .wpcf7-form .wpcf7-submit {
@@ -268,7 +268,7 @@ Updated: 2026-01-24 01:02:13
 }
 
 /* ========================================
-   RESPONSIVE
+    RESPONSIVE
 ======================================== */
 
 @media (max-width: 768px) {
@@ -285,45 +285,46 @@ Updated: 2026-01-24 01:02:13
     .wpcf7-form .field-group label {
         font-size: 18px;
     }
+
 }
 
 @media (max-width: 480px) {
 
-  .wpcf7-form .infos-livraison{
+    .wpcf7-form .infos-livraison{
     display: flex;
     flex-direction: column;
     gap: 24px;
-  }
+}
 
-  .wpcf7-form .col-infos,
-  .wpcf7-form .col-livraison{
+    .wpcf7-form .col-infos,
+    .wpcf7-form .col-livraison{
     width: 100%;
     max-width: 100%;
-  }
+}
 
-  .wpcf7-form .separator,
-  .wpcf7-form .divider,
-  .wpcf7-form .infos-livraison::before,
-  .wpcf7-form .infos-livraison::after{
+    .wpcf7-form .separator,
+    .wpcf7-form .divider,
+    .wpcf7-form .infos-livraison::before,
+    .wpcf7-form .infos-livraison::after{
     display: none !important;
-  }
+}
 
-  .wpcf7-form .field-group{
+    .wpcf7-form .field-group{
     width: 100%;
-  }
+}
 
-  .wpcf7-form input[type="text"],
-  .wpcf7-form input[type="email"],
-  .wpcf7-form input[type="tel"],
-  .wpcf7-form input[type="number"],
-  .wpcf7-form input[type="url"],
-  .wpcf7-form select,
-  .wpcf7-form textarea{
+    .wpcf7-form input[type="text"],
+    .wpcf7-form input[type="email"],
+    .wpcf7-form input[type="tel"],
+    .wpcf7-form input[type="number"],
+    .wpcf7-form input[type="url"],
+    .wpcf7-form select,
+    .wpcf7-form textarea{
     width: 100% !important;
     max-width: 100%;
     box-sizing: border-box;
     display: block;
     font-size: 16px;
-  }
+}
 
 }
