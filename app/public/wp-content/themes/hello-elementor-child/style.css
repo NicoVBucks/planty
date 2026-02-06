@@ -171,10 +171,18 @@ Updated: 2026-01-24 01:02:13
 .wpcf7-form .infos-livraison {
     display: grid;
     align-items: start;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     gap: 60px;
     max-width: 1000px;
+    width: 100%;
     margin: 0 auto 40px;
+}
+
+.wpcf7-form .col-infos,
+.wpcf7-form .col-livraison {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
 }
 
 /* Groupes de champs */
@@ -195,6 +203,7 @@ Updated: 2026-01-24 01:02:13
 /* Champs texte et email */
 .wpcf7-form .field-input {
     width: 100% !important;
+    max-width: 100% !important;
     height: 71px !important;
     font-family: 'Syne', sans-serif;
     font-size: 16px;
@@ -225,6 +234,11 @@ Updated: 2026-01-24 01:02:13
     width: 2px;
     background-color: white;
     transform: translateX(-50%);
+}
+
+.wpcf7-form-control-wrap {
+    display: block;
+    width: 100%;
 }
 
 /* ========================================
