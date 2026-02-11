@@ -56,6 +56,7 @@ Le projet est versionné avec Git.
 
 Développé par NicoVBucks
 
+----------------------------------------------------------------------------------------
 
 📄 <b>Description du site – Page par page</b>
 
