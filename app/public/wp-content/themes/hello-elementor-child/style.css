@@ -169,7 +169,6 @@ Updated: 2026-01-24 01:02:13
     align-items: start; /* force l’alignement en haut */
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); /* peut diminuer jusqu'à 0 ou grandir jusqu'à 1 */
     gap: 60px;
-    max-width: 100%;
     width: 100%;
     padding-left: 10px; /* pour éviter que ça colle au bord sur écrans plus petits */
     padding-right: 10px; /* pareil */
