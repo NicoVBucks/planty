@@ -125,14 +125,14 @@ Updated: 2026-01-24 01:02:13
 
 /* Masquer les flèches Mozilla */
 .wpcf7-form input[type="number"] {
-    appearance: textfield;
+    appearance: textfield; /* Affiche ce champ number comme un champ texte normal */
     -moz-appearance: textfield;
 }
 
 /* Masquer les flèches Safari / Chrome */
 .wpcf7-form input[type="number"]::-webkit-inner-spin-button,
 .wpcf7-form input[type="number"]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
+    -webkit-appearance: none; /* masque les pseudos éléments "flèches haut et bas */
     margin: 0;
 }
 
@@ -150,7 +150,6 @@ Updated: 2026-01-24 01:02:13
 .wpcf7-form .col-infos,
 .wpcf7-form .col-livraison {
     width: 100%;
-    max-width: 100%;
 }
 
 /* Titres H3 dans les colonnes */
@@ -167,15 +166,27 @@ Updated: 2026-01-24 01:02:13
 /* Infos + Livraison */
 .wpcf7-form .infos-livraison {
     display: grid;
-    align-items: start;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: start; /* force l’alignement en haut */
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); /* peut diminuer jusqu'à 0 ou grandir jusqu'à 1 */
     gap: 60px;
     max-width: 100%;
     width: 100%;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 10px; /* pour éviter que ça colle au bord sur écrans plus petits */
+    padding-right: 10px; /* pareil */
     box-sizing: border-box;
-    position: relative;
+    position: relative; /* sans ça, le divider dépasse du container */
+}
+
+/* Ligne verticale entre Vos informations et Livraison */
+.wpcf7-form .infos-livraison::before {
+    content: ""; /* obligatoire même vide pour créer un pseudo-élément */
+    position: absolute; /* place la ligne dans le conteneur parent */
+    left: 50%;
+    top: 0; /* commence en haut du conteneur */
+    bottom: 0; /* descend en bas du conteneur */
+    width: 2px;
+    background-color: white;
+    transform: translateX(-50%); /* pour parfaitement centrer les 2px de sa propre largeur */
 }
 
 /* Tous les champs */
@@ -205,18 +216,6 @@ Updated: 2026-01-24 01:02:13
     background: white;
     color: #000000;
     box-sizing: border-box; /* pour inclure largeur, contenu et padding évitant de dépasser son conteneur */
-}
-
-/* Ligne verticale entre Vos informations et Livraison */
-.wpcf7-form .infos-livraison::before {
-    content: ""; /* obligatoire même vide pour créer un pseudo-élément */
-    position: absolute; /* place la ligne dans le conteneur parent */
-    left: 50%;
-    top: 0; /* commence en haut du conteneur */
-    bottom: 0; /* descend en bas du conteneur */
-    width: 2px;
-    background-color: white;
-    transform: translateX(-50%); /* pour parfaitement centrer les 2px de width */
 }
 
 /* BOUTON COMMANDER (retravaillé à la main car pas fait sous WPForms */
@@ -294,7 +293,6 @@ div.wpcf7 .wpcf7-response-output {
     .wpcf7-form .col-infos,
     .wpcf7-form .col-livraison{
     width: 100%;
-    max-width: 100%;
 }
 
     .wpcf7-form .separator,
