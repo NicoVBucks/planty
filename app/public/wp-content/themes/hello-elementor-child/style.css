@@ -75,7 +75,7 @@ Updated: 2026-01-24 01:02:13
 
 /* --------------------------- MENU NOUS RENCONTRER  ------------------------- */ 
 
-/* Lien actif du menu en gras */
+/* Lien actif du menu en gras tablette et PC */
 .elementor-410 .elementor-element.elementor-element-3c31aa7 .elementor-heading-title {
     font-weight: 700;
 }
@@ -84,39 +84,64 @@ Updated: 2026-01-24 01:02:13
     font-weight: 400;
 }
 
+/* Lien actif du menu en gras mobile */
+.elementor-410 .elementor-element.elementor-element-c4af262 .elementor-heading-title {
+    font-weight: 700;
+}
+
+.home .elementor-410 .elementor-element.elementor-element-c4af262 .elementor-heading-title {
+    font-weight: 400;
+}
+
 /* --------------------------- FORMULAIRE COMMANDER  ------------------------- */ 
 
-/* CHAMPS DE QUANTITÉ SOUS LES IMAGES */
-
-.produit-quantite-container {
-    text-align: center;
+/* Aligne les champs */
+.wpcf7-form .bloc-quantites {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 100%;
     margin-top: 20px;
 }
 
-.produit-quantite-container input.input-quantite[type="number"] {
+/* Centrer les chiffres */
+.wpcf7-form .bloc-quantites .produit-quantite-container {
+    text-align: center;
+}
+
+/* 4) Style du champ */
+.wpcf7-form .bloc-quantites input.input-quantite[type="number"] {
     width: 50px;
     height: 70px;
     font-family: 'Inter', sans-serif;
     font-size: 16px;
     font-weight: 400;
     text-align: center;
-    border: 2px solid white;
-    background: white;
+    border: 2px solid #ffffff;
+    background: #ffffff;
     margin: 0 auto;
     display: block;
 }
 
 /* Masquer les flèches Mozilla */
-input[type="number"] {
+.wpcf7-form input[type="number"] {
     appearance: textfield;
     -moz-appearance: textfield;
 }
 
-/* Chrome / Edge / Safari */
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
+/* Masquer les flèches Safari / Chrome */
+.wpcf7-form input[type="number"]::-webkit-inner-spin-button,
+.wpcf7-form input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
+}
+
+/* Séparateur horizontal */
+.divider-commande {
+    width: 99%;
+    height: 2px;
+    background: #ffffff;
+    margin: 50px auto;
 }
 
 /* FORMULAIRE CONTACT FORM 7 */
@@ -126,7 +151,6 @@ input[type="number"]::-webkit-outer-spin-button {
 .wpcf7-form .col-livraison {
     width: 100%;
     max-width: 100%;
-    min-width: 0;
 }
 
 /* Titres H3 dans les colonnes */
@@ -248,6 +272,12 @@ div.wpcf7 .wpcf7-response-output {
         font-size: 18px;
     }
 
+    .divider-commande {
+    width: 98%;
+    height: 2px;
+    background: #ffffff;
+    margin: 50px auto;
+}
 }
 
 @media (max-width: 480px) {
@@ -271,7 +301,7 @@ div.wpcf7 .wpcf7-response-output {
     .wpcf7-form .divider,
     .wpcf7-form .infos-livraison::before,
     .wpcf7-form .infos-livraison::after{
-    display: none !important;
+    display: none;
 }
 
     .wpcf7-form .field-group{
@@ -285,11 +315,18 @@ div.wpcf7 .wpcf7-response-output {
     .wpcf7-form input[type="url"],
     .wpcf7-form select,
     .wpcf7-form textarea{
-    width: 100% !important;
+    width: 100%;
     max-width: 100%;
     box-sizing: border-box;
     display: block;
     font-size: 16px;
+}
+
+.divider-commande {
+    width: 95%;
+    height: 2px;
+    background: #ffffff;
+    margin: 50px auto;
 }
 
 }
