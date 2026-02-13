@@ -22,3 +22,14 @@ endif;
 add_action( 'wp_enqueue_scripts', 'child_theme_configurator_css', 10 );
 
 // END ENQUEUE PARENT ACTION
+
+
+/* ------------------------ HOOK ------------------------- */
+
+add_action('wp_head', function () {
+    if (!current_user_can('administrator')) {
+        echo '<style>.admin-link{display:none !important;}</style>';
+    }
+});
+
+
